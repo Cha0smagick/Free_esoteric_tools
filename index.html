@@ -171,25 +171,5 @@
       <!-- End of repeated block -->
     </div>
   </main>
-   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Function to shuffle array
-      function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
-        }
-      }
-
-      // Get all grid items and shuffle their order
-      const gridContainer = document.getElementById('grid-container');
-      const gridItems = Array.from(gridContainer.getElementsByClassName('grid-item'));
-      shuffleArray(gridItems);
-
-      // Append shuffled grid items back to the grid container
-      gridContainer.innerHTML = '';
-      gridItems.forEach(item => gridContainer.appendChild(item));
-    });
-  </script>
 </body>
 </html>
